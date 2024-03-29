@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navlinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li {
+  text-decoration: none;
+  list-style-type: none;
+  color: #ff6060;
+  margin-right: 20px;
+}
+
+.active {
+  text-decoration: none;
+}
