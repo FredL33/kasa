@@ -1,0 +1,14 @@
+.banner {
+  background: url("../images/banner.png");
+  color: rgb(218, 18, 18);
+  height: 14rem;
+  border: none;
+  border-radius: 50px;
+}
+
+.banner h2 {
+  padding-left: 35%;
+  padding-top: 5%;
+  font-weight: 500;
+  font-size: xx-large;
+}
