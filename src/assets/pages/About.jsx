@@ -7,6 +7,7 @@ const About = () => {
     <div>
       <Header />
       <div className="picture"></div>
+
       <Footer />
     </div>
   );
