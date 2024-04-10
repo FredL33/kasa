@@ -12,3 +12,43 @@
   font-weight: 500;
   font-size: xx-large;
 }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 50px;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  background: #eee;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.gallery img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.grid-container {
+  min-height: 830px;
+  background-color: rgb(243, 241, 241);
+  border-radius: 25px;
+  margin: 0 50px 45px 50px;
+}
+
+.title {
+  position: absolute;
+  color: white;
+  padding-top: 80%;
+}
