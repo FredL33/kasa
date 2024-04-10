@@ -12,7 +12,7 @@ function Gallery() {
         {data.map((item) => (
           <li key={item.id}>
             <Link to={`/appartement/${item.id}`}>
-              <div className="item" appartment={item}>
+              <div className="item">
                 <img src={item.cover} alt="appartement" />
                 <h3 className="title">{item.title}</h3>
               </div>
