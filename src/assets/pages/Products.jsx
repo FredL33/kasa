@@ -18,11 +18,11 @@ const Products = () => {
 
   if (loading) return <div>Loading ...</div>;
   if (error || !appt) return null; // Ajouté pour prévenir le rendu du composant si une redirection est en cours
-  console.log();
+  console.log(appt);
   return (
     <div>
       <Header />
-      <div>{appt.picture}</div>
+      <div>test</div>
       <Footer />
     </div>
   );
