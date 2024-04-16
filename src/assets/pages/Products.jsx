@@ -3,6 +3,7 @@ import Header from "../components/header/Header";
 import { useParams, useNavigate } from "react-router-dom";
 import useFetch from "../components/gallery/usefetch";
 import { useEffect } from "react";
+import SlideShow from "../components/carrousel/Carrousel";
 
 const Products = () => {
   const { id } = useParams();
@@ -22,7 +23,9 @@ const Products = () => {
   return (
     <div>
       <Header />
-      <div>test</div>
+      <div>
+        <SlideShow appt={appt.pictures} />
+      </div>
       <Footer />
     </div>
   );

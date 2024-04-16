@@ -5,19 +5,19 @@ import right from "../assets/images/right-arrow.png";
 
 // Composant pour le slideshow des images des locations
 
-function SlideShow({ images }) {
+function SlideShow({ appt }) {
   // Index sur l'image actuelle
   const [currentIndex, setCurrentIndex] = useState(0);
   // Etat pour la transition
   const [isFading, setIsFading] = useState(false);
 
   // Affichage des flèches si plus d'une image
-  const showArrows = images.length > 1;
+  const showArrows = appt.length > 1;
 
   const handleNext = () => {
     setIsFading(true);
     setTimeout(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % appt.length);
       setIsFading(false);
     }, 200);
   };
@@ -26,7 +26,7 @@ function SlideShow({ images }) {
     setIsFading(true);
     setTimeout(() => {
       setCurrentIndex(
-        (prevIndex) => (prevIndex - 1 + images.length) % images.length
+        (prevIndex) => (prevIndex - 1 + appt.length) % appt.length
       );
       setIsFading(false);
     }, 200);
@@ -44,7 +44,7 @@ function SlideShow({ images }) {
           </button>
         )}
         <img
-          src={images[currentIndex]}
+          src={appt[currentIndex]}
           alt={`Slide ${currentIndex}`}
           className={`slide-show-image ${isFading ? "fading" : ""}`}
         />
@@ -57,7 +57,7 @@ function SlideShow({ images }) {
           </button>
         )}
         <div className="slide-show-index">
-          {showArrows && `${currentIndex + 1} / ${images.length}`}
+          {showArrows && `${currentIndex + 1} / ${appt.length}`}
         </div>
       </div>
     </div>
